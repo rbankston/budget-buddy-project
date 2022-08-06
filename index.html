@@ -9,7 +9,22 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
- 
+        <h1>My Weekly Budget!</h1>
+        <form>
+            <input id="budget" type="number"/>
+            <h3>Expense type </h3>
+            <input id="new-bill" type="radio" name="Category" /> Bills<br>
+            <input id="new-food" type="radio" name="Category" /> Food<br>
+            <input id="new-clothes" type="radio" name="Category" /> Clothes<br>
+            <input id="new-entertainment" type="radio" name="Category" /> Entertainment<br>
+            <h3>What would you like to name your purchase?</h3>
+            <input id="name-of-purchase" type="text"/> 
+            <h3>How much did you spend?</h3>
+            <input id="cost" type="number"/>
+            <h3>When was the purchase made? (Please enter date in MM-DD-YYYY format)</h3>
+            <input id="date" type="text"/>
+            <br><button id="submit" type="submit">Submit</button>
+        </form>
         
         <script src="script.js"></script>
     </body>
