@@ -1,0 +1,163 @@
+body {
+    font-family: 'Shadows Into Light', cursive;
+    background-color: black;
+}
+
+header {
+    background-color: #CC99FF;
+    width: auto;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#entertainment {
+    background-color: #A9D1F7;
+    width: auto;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 5px;
+    margin-bottom: 3px;
+    text-align: left;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#entertainmentItems {
+    background-color: #BDD5EF;
+    width: 90%;
+    padding: 20px;
+    margin: 5px;
+    margin-left: 15px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#food {
+    background-color: #B4F0A7;
+    width: auto;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 5px;
+    margin-bottom: 3px;
+    text-align: left;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#foodItems {
+    background-color: #C7E3D0;
+    width: 90%;
+    padding: 20px;
+    margin: 5px;
+    margin-left: 15px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#clothing {
+    background-color: #FFFFBF;
+    width: auto;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 5px;
+    margin-bottom: 3px;
+    text-align: left;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#clothingItems {
+    background-color: #E7E6CE;
+    width: 90%;
+    padding: 20px;
+    margin: 5px;
+    margin-left: 15px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#bills {
+    background-color: #FFDFBE;
+    width: auto;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 5px;
+    margin-bottom: 3px;
+    text-align: left;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#billsItems {
+    background-color: #F2D8CC;
+    width: 90%;
+    padding: 20px;
+    margin: 5px;
+    margin-left: 15px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#totalSpent {
+    background-color: #FFB1B0;
+    width: auto;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 5px;
+}
+
+#updateBudgetButton {
+    background-color: #662B7E;
+    color: white;
+}
+
+#entPurchaseButton {
+    background-color: #1F75FE;
+    color: black;
+}
+
+#foodPurchaseButton {
+    background-color: #03C03C;
+    color: black;
+}
+
+#clothingPurchaseButton {
+    background-color: #FEE72F;
+    color: black;
+}
+
+#billsPurchaseButton {
+    background-color: #FF8B00;
+    color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    #entertainmentItems {
+        width: auto;
+        margin-left: 8px;
+        margin-right: 5px;
+        margin-top: 0px;
+    }
+
+    #foodItems {
+        width: auto;
+        margin-left: 8px;
+        margin-right: 5px;
+        margin-top: 0px;
+    }
+
+    #clothingItems {
+        width: auto;
+        margin-left: 8px;
+        margin-right: 5px;
+        margin-top: 0px;
+    }
+
+    #billsItems {
+        width: auto;
+        margin-left: 8px;
+        margin-right: 5px;
+        margin-top: 0px;
+    }
+}
