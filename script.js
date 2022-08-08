@@ -1,7 +1,7 @@
-document.getElementById("submit").addEventListener("click", (event) =>{
+document.getElementById("updateBudgetButton").addEventListener("click", (event) =>{
     event.preventDefault();
 
-    const weeklyBudget = document.getElementById("budget").value;
+    const weeklyBudget = document.getElementById("budgetInput").value;
 
 //Each category has it's own array
 const bills = [];
@@ -10,9 +10,9 @@ const clothes = [];
 const entertainments = [];
 //this will be used for the user to input new purchases
 
-const itemName = document.getElementById("name-of-purchase").value;
-const itemPrice = document.getElementById("cost").value;
-const dateBought = document.getElementById("date").value;
+const itemName = document.getElementById("nameInput").value;
+const itemPrice = document.getElementById("amountInput").value;
+// const dateBought = document.getElementById("date").value;
 
 function addItem(array, itemName, itemPrice, dateBought) {
     return array.push({Name: itemName, Price: itemPrice, Date: dateBought});
