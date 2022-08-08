@@ -17,6 +17,7 @@ header {
     border-radius: 25px;
     padding: 20px;
     margin: 5px;
+    margin-bottom: 3px;
     text-align: left;
     font-family: 'Shadows Into Light', cursive;
 }
@@ -27,6 +28,7 @@ header {
     padding: 20px;
     margin: 5px;
     margin-left: 15px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -37,6 +39,7 @@ header {
     border-radius: 25px;
     padding: 20px;
     margin: 5px;
+    margin-bottom: 3px;
     text-align: left;
     font-family: 'Shadows Into Light', cursive;
 }
@@ -47,6 +50,7 @@ header {
     padding: 20px;
     margin: 5px;
     margin-left: 15px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -57,6 +61,7 @@ header {
     border-radius: 25px;
     padding: 20px;
     margin: 5px;
+    margin-bottom: 3px;
     text-align: left;
     font-family: 'Shadows Into Light', cursive;
 }
@@ -67,6 +72,7 @@ header {
     padding: 20px;
     margin: 5px;
     margin-left: 15px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -77,6 +83,7 @@ header {
     border-radius: 25px;
     padding: 20px;
     margin: 5px;
+    margin-bottom: 3px;
     text-align: left;
     font-family: 'Shadows Into Light', cursive;
 }
@@ -87,6 +94,7 @@ header {
     padding: 20px;
     margin: 5px;
     margin-left: 15px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -122,4 +130,34 @@ header {
 #billsPurchaseButton {
     background-color: #FF8B00;
     color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    #entertainmentItems {
+        width: auto;
+        margin-left: 8px;
+        margin-right: 5px;
+        margin-top: 0px;
+    }
+
+    #foodItems {
+        width: auto;
+        margin-left: 8px;
+        margin-right: 5px;
+        margin-top: 0px;
+    }
+
+    #clothingItems {
+        width: auto;
+        margin-left: 8px;
+        margin-right: 5px;
+        margin-top: 0px;
+    }
+
+    #billsItems {
+        width: auto;
+        margin-left: 8px;
+        margin-right: 5px;
+        margin-top: 0px;
+    }
 }
