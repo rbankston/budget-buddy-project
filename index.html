@@ -1,31 +1,61 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>My Weekly Budget!</h1>
-        <form>
-            <input id="budget" type="number"/>
-            <h3>Expense type </h3>
-            <input id="new-bill" type="radio" name="Category" /> Bills<br>
-            <input id="new-food" type="radio" name="Category" /> Food<br>
-            <input id="new-clothes" type="radio" name="Category" /> Clothes<br>
-            <input id="new-entertainment" type="radio" name="Category" /> Entertainment<br>
-            <h3>What would you like to name your purchase?</h3>
-            <input id="name-of-purchase" type="text"/> 
-            <h3>How much did you spend?</h3>
-            <input id="cost" type="number"/>
-            <h3>When was the purchase made? (Please enter date in MM-DD-YYYY format)</h3>
-            <input id="date" type="text"/>
-            <br><button id="submit" type="submit">Submit</button>
-        </form>
-        
-        <script src="script.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Budget Buddy</title>
+</head>
+<body>
+    <header>
+        <h1>Weekly Budget</h1>
+        <input type="number" placeholder="Weekly Budget" id="budgetInput" />
+        <button id="updateBudgetButton">Submit</button>
+        <h2>Available Balance</h2>
+    </header>
+    <main id="purchases">
+        <section id="entertainment">
+            <h1>Entertainment</h1>
+            <input type="text" placeholder="Purchase Name" id="nameInput" />
+            <input type="number" placeholder="Amount" id="amountInput" />
+            <button id="entPurchaseButton">Add</button>
+        </section>
+        <div id="entertainmentItems">
+            Item 
+        </div>
+        <section id="food" class="dropdown">
+            <h1>Food</h1>
+            <input type="text" placeholder="Purchase Name" id="nameInput" />
+            <input type="number" placeholder="Amount" id="amountInput" />
+            <button id="foodPurchaseButton">Add</button>
+        </section>
+        <div id="foodItems">
+            Item
+        </div>
+        <section id="clothing">
+            <h1>Clothing</h1>
+            <input type="text" placeholder="Purchase Name" id="nameInput" />
+            <input type="number" placeholder="Amount" id="amountInput" />
+            <button id="clothingPurchaseButton">Add</button>
+        </section>
+        <div id="clothingItems">
+            Item
+        </div>
+        <section id="bills">
+            <h1>Bills</h1>
+            <input type="text" placeholder="Purchase Name" id="nameInput" />
+            <input type="number" placeholder="Amount" id="amountInput" />
+            <button id="billsPurchaseButton">Add</button>
+        </section>
+        <div id="billsItems">
+            Item
+        </div>
+        <section id="totalSpent">
+            <h1>Total Money Spent</h1>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
 </html>
