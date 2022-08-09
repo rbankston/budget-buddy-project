@@ -16,6 +16,9 @@ document.getElementById("entPurchaseButton").addEventListener("click", (event) =
 
     entertainments.push = ({"name":document.getElementById("entNameInput").value, "price":document.getElementById("entAmountInput").value})
 
+    document.getElementById("entNameInput").value = '';
+    document.getElementById("entAmountInput").value = '';
+
 console.log(entertainments);
 })
 
@@ -26,6 +29,8 @@ document.getElementById("foodPurchaseButton").addEventListener("click", (event) 
 
     foods.push = ({"name":document.getElementById("foodNameInput").value, "price":document.getElementById("foodAmountInput").value})
 
+    document.getElementById("foodNameInput").value = '';
+    document.getElementById("foodAmountInput").value = '';
 console.log(foods);
 })
 
@@ -35,6 +40,8 @@ document.getElementById("clothingPurchaseButton").addEventListener("click", (eve
 
     clothes.push = ({"name":document.getElementById("clothingNameInput").value, "price":document.getElementById("clothingAmountInput").value})
 
+    document.getElementById("clothingNameInput").value = '';
+    document.getElementById("clothingAmountInput").value = '';
 console.log(clothes);
 })
 
@@ -45,6 +52,8 @@ document.getElementById("billsPurchaseButton").addEventListener("click", (event)
     bills.push = ({"name":document.getElementById("billsNameInput").value, "price":document.getElementById("billsAmountInput").value})
 
 console.log(bills);
+document.getElementById("billsNameInput").value = '';
+document.getElementById("billsAmountInput").value = '';
 })
 //this will be used for the user to input new purchases
 
