@@ -22,7 +22,7 @@ header {
     font-family: 'Shadows Into Light', cursive;
 }
 
-#entertainmentItems {
+#entertainmentItems :not(:empty) {
     background-color: #BDD5EF;
     width: 90%;
     padding: 20px;
@@ -44,7 +44,7 @@ header {
     font-family: 'Shadows Into Light', cursive;
 }
 
-#foodItems {
+#foodItems :not(:empty) {
     background-color: #C7E3D0;
     width: 90%;
     padding: 20px;
@@ -66,7 +66,7 @@ header {
     font-family: 'Shadows Into Light', cursive;
 }
 
-#clothingItems {
+#clothingItems :not(:empty) {
     background-color: #E7E6CE;
     width: 90%;
     padding: 20px;
@@ -88,7 +88,7 @@ header {
     font-family: 'Shadows Into Light', cursive;
 }
 
-#billsItems {
+#billsItems :not(:empty) {
     background-color: #F2D8CC;
     width: 90%;
     padding: 20px;
@@ -159,5 +159,52 @@ header {
         margin-left: 8px;
         margin-right: 5px;
         margin-top: 0px;
+    }
+
+    #purchases {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #entertainment {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 78px;
+        padding-right: 78px;
+    }
+
+    #food {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 78px;
+        padding-right: 78px;
+    }
+
+    #clothing {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 78px;
+        padding-right: 78px;
+    }
+
+    #bills {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 78px;
+        padding-right: 78px;
+    }
+
+    #entDesk, #foodDesk, #clothDesk, #billsDesk {
+        width: 25%;
+    }
+
+    #totalSpent {
+        position: absolute;
+        bottom: 0;
+        width: 96.5%;
     }
 }

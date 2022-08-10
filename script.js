@@ -105,5 +105,3 @@ console.log(availableBalance);
 
 
 });
-
-
