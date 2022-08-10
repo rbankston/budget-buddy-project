@@ -10,17 +10,27 @@ const foods = [];
 const clothes = [];
 const entertainments = [];
 
+function debitFunction(array, nameInput, amountInput, listDiv) {
+    if (document.getElementById(nameInput).value === "" ||  document.getElementById(amountInput).value === "") {
+        alert("Please enter a value for the name and price")
+        } else {
+
+        array.push({"name":document.getElementById(nameInput).value, "price":document.getElementById(amountInput).value})
+        let div = document.getElementById(listDiv);
+        let span = document.createElement("lispan"); 
+        span.innerHTML = `Name: ${document.getElementById(nameInput).value} Price: $${document.getElementById(amountInput).value}`;
+        div.appendChild(span);
+
+        document.getElementById(nameInput).value = '';
+        document.getElementById(amountInput).value = '';
+    }
+}
 
 
 // Entertainment items
 document.getElementById("entPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
-
-    entertainments.push({"name":document.getElementById("entNameInput").value, "price":document.getElementById("entAmountInput").value})
-
-    document.getElementById("entNameInput").value = '';
-    document.getElementById("entAmountInput").value = '';
-
+     debitFunction(entertainments, "entNameInput", "entAmountInput", "entertainmentItems");
 console.log(entertainments);
 })
 
@@ -28,34 +38,22 @@ console.log(entertainments);
 
 document.getElementById("foodPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
-
-    foods.push({"name":document.getElementById("foodNameInput").value, "price":document.getElementById("foodAmountInput").value})
-
-    document.getElementById("foodNameInput").value = '';
-    document.getElementById("foodAmountInput").value = '';
+    debitFunction(foods, "foodNameInput", "foodAmountInput", "foodItems");
 console.log(foods);
 })
 
 // Clothing Array
 document.getElementById("clothingPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
-
-    clothes.push({"name":document.getElementById("clothingNameInput").value, "price":document.getElementById("clothingAmountInput").value})
-
-    document.getElementById("clothingNameInput").value = '';
-    document.getElementById("clothingAmountInput").value = '';
+    debitFunction(clothes, "clothingNameInput", "clothingAmountInput", "clothingItems");
 console.log(clothes);
 })
 
 // Bills Array
 document.getElementById("billsPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
-
-    bills.push({"name":document.getElementById("billsNameInput").value, "price":document.getElementById("billsAmountInput").value})
-
-console.log(bills);
-document.getElementById("billsNameInput").value = '';
-document.getElementById("billsAmountInput").value = '';
+    debitFunction(bills, "billsNameInput", "billsAmountInput", "billsItems");
+    console.log(bills);
 })
 //this will be used for the user to input new purchases
 
@@ -63,11 +61,11 @@ document.getElementById("billsAmountInput").value = '';
 // const itemPrice = document.getElementById("amountInput").value;
 // const dateBought = document.getElementById("date").value;
 
-function addItem(array, itemName, itemPrice, dateBought) {
-    return array.push({Name: itemName, Price: itemPrice, Date: dateBought});
-}
+// function addItem(array, itemName, itemPrice, dateBought) {
+//     return array.push({Name: itemName, Price: itemPrice, Date: dateBought});
+// }
 
-addItem(bills, "Gas", 40, "08-02-2022");
+// addItem(bills, "Gas", 40, "08-02-2022");
 
 //Below allows us to add the total price of each category
 let billsTotal = 0;
