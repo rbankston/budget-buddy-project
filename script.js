@@ -10,12 +10,16 @@ const foods = [];
 const clothes = [];
 const entertainments = [];
 
-function debitFunction(array, nameInput, amountInput) {
+function debitFunction(array, nameInput, amountInput, listDiv) {
     if (document.getElementById(nameInput).value === "" ||  document.getElementById(amountInput).value === "") {
         alert("Please enter a value for the name and price")
         } else {
 
         array.push({"name":document.getElementById(nameInput).value, "price":document.getElementById(amountInput).value})
+        let div = document.getElementById(listDiv);
+        let span = document.createElement("lispan"); 
+        span.innerHTML = `Name: ${document.getElementById(nameInput).value} Price: $${document.getElementById(amountInput).value}`;
+        div.appendChild(span);
 
         document.getElementById(nameInput).value = '';
         document.getElementById(amountInput).value = '';
@@ -26,7 +30,7 @@ function debitFunction(array, nameInput, amountInput) {
 // Entertainment items
 document.getElementById("entPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
-     debitFunction(entertainments, "entNameInput", "entAmountInput");
+     debitFunction(entertainments, "entNameInput", "entAmountInput", "entertainmentItems");
 console.log(entertainments);
 })
 
@@ -34,21 +38,21 @@ console.log(entertainments);
 
 document.getElementById("foodPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
-    debitFunction(foods, "foodNameInput", "foodAmountInput");
+    debitFunction(foods, "foodNameInput", "foodAmountInput", "foodItems");
 console.log(foods);
 })
 
 // Clothing Array
 document.getElementById("clothingPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
-    debitFunction(clothes, "clothingNameInput", "clothingAmountInput");
+    debitFunction(clothes, "clothingNameInput", "clothingAmountInput", "clothingItems");
 console.log(clothes);
 })
 
 // Bills Array
 document.getElementById("billsPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
-    debitFunction(bills, "billsNameInput", "billsAmountInput");
+    debitFunction(bills, "billsNameInput", "billsAmountInput", "billsItems");
     console.log(bills);
 })
 //this will be used for the user to input new purchases
