@@ -1,5 +1,9 @@
 document.getElementById("updateBudgetButton").addEventListener("click", (event) =>{
     event.preventDefault();
+    let div = document.getElementById("Budget");
+    let span = document.createElement("span"); 
+    span.innerHTML = `Weekly Budget ${document.getElementById("budgetInput").value}`;
+    div.appendChild(span);
 
     const weeklyBudget = document.getElementById("budgetInput").value;
 
@@ -17,7 +21,7 @@ function debitFunction(array, nameInput, amountInput, listDiv) {
 
         array.push({"name":document.getElementById(nameInput).value, "price":document.getElementById(amountInput).value})
         let div = document.getElementById(listDiv);
-        let span = document.createElement("lispan"); 
+        let span = document.createElement("span"); 
         span.innerHTML = `Name: ${document.getElementById(nameInput).value} Price: $${document.getElementById(amountInput).value}`;
         div.appendChild(span);
 
