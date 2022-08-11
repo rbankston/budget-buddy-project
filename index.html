@@ -13,45 +13,58 @@
         <h1>Weekly Budget</h1>
         <input type="number" placeholder="Weekly Budget" id="budgetInput" />
         <button id="updateBudgetButton">Submit</button>
+        <div id="Budget"></div>
         <h2>Available Balance</h2>
     </header>
     <main id="purchases">
-        <section id="entertainment">
-            <h1>Entertainment</h1>
-            <input type="text" placeholder="Purchase Name" id="entNameInput" />
-            <input type="number" placeholder="Amount" id="entAmountInput" />
-            <button id="entPurchaseButton">Add</button>
-        </section>
-        <div id="entertainmentItems">
+        <div id="entDesk">
+            <section id="entertainment">
+                <h1>Entertainment</h1>
+                <input type="text" placeholder="Purchase Name" id="entNameInput" />
+                <input type="number" placeholder="Amount" id="entAmountInput" />
+                <button id="entPurchaseButton">Add</button>
+            </section>
+            <div id="entertainmentItems">
+                Item
+            </div>
         </div>
-        <section id="food" class="dropdown">
-            <h1>Food</h1>
-            <input type="text" placeholder="Purchase Name" id="foodNameInput" />
-            <input type="number" placeholder="Amount" id="foodAmountInput" />
-            <button id="foodPurchaseButton">Add</button>
-        </section>
-        <div id="foodItems">
+        <div id="foodDesk">
+            <section id="food">
+                <h1>Food</h1>
+                <input type="text" placeholder="Purchase Name" id="foodNameInput" />
+                <input type="number" placeholder="Amount" id="foodAmountInput" />
+                <button id="foodPurchaseButton">Add</button>
+            </section>
+            <div id="foodItems">
+                Item
+            </div>
         </div>
-        <section id="clothing">
-            <h1>Clothing</h1>
-            <input type="text" placeholder="Purchase Name" id="clothingNameInput" />
-            <input type="number" placeholder="Amount" id="clothingAmountInput" />
-            <button id="clothingPurchaseButton">Add</button>
-        </section>
-        <div id="clothingItems">
+        <div id="clothDesk">
+            <section id="clothing">
+                <h1>Clothing</h1>
+                <input type="text" placeholder="Purchase Name" id="clothingNameInput" />
+                <input type="number" placeholder="Amount" id="clothingAmountInput" />
+                <button id="clothingPurchaseButton">Add</button>
+            </section>
+            <div id="clothingItems">
+                Item
+            </div>
         </div>
-        <section id="bills">
-            <h1>Bills</h1>
-            <input type="text" placeholder="Purchase Name" id="billsNameInput" />
-            <input type="number" placeholder="Amount" id="billsAmountInput" />
-            <button id="billsPurchaseButton">Add</button>
-        </section>
-        <div id="billsItems">
+        <div id="billsDesk">
+            <section id="bills">
+                <h1>Bills</h1>
+                <input type="text" placeholder="Purchase Name" id="billsNameInput" />
+                <input type="number" placeholder="Amount" id="billsAmountInput" />
+                <button id="billsPurchaseButton">Add</button>
+            </section>
+            <div id="billsItems">
+                Item
+            </div>
         </div>
-        <section id="totalSpent">
-            <h1>Total Money Spent</h1>
-        </section>
     </main>
+    <footer id="totalSpent">
+        <h1>Total Money Spent</h1>
+    </foooter>
     <script src="script.js"></script>
 </body>
 </html>

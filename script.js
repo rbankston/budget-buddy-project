@@ -130,10 +130,4 @@ document.getElementById("billsPurchaseButton").addEventListener("click", (event)
 // addItem(bills, "Gas", 40, "08-02-2022");
 
 //Below allows us to add the total price of each category
-
-
-
-
-
-
 });
