@@ -17,7 +17,14 @@ let clothesTotal = 0;
 let entertainmentsTotal = 0;
 
 let totalSpent = 0;
-function totalSpentCalc(){totalSpent = billsTotal + foodsTotal + clothesTotal + entertainmentsTotal}
+function totalSpentCalc(){
+    totalSpent = billsTotal + foodsTotal + clothesTotal + entertainmentsTotal
+    let footer = document.getElementById("totalSpent");
+    let span = document.createElement("span"); 
+    span.innerHTML = `Total Money: $${totalSpent}`;
+    footer.appendChild(span);
+
+}
 let availableBalance = weeklyBudget - totalSpent;
 function availableBalanceCalc(){
     availableBalance = weeklyBudget - totalSpent
