@@ -1,5 +1,17 @@
+document.getElementById("budgetInput")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("updateBudgetButton").click();
+    }
+});
+
 document.getElementById("updateBudgetButton").addEventListener("click", (event) =>{
     event.preventDefault();
+    let div = document.getElementById("Budget");
+    let span = document.createElement("span"); 
+    span.innerHTML = `$ ${document.getElementById("budgetInput").value}`;
+    div.appendChild(span);
 
     const weeklyBudget = document.getElementById("budgetInput").value;
 console.log(weeklyBudget);
@@ -58,8 +70,16 @@ function debitFunction(array, nameInput, amountInput, listDiv) {
 
         array.push({"name":document.getElementById(nameInput).value, price:parseInt(document.getElementById(amountInput).value)})
         let div = document.getElementById(listDiv);
+<<<<<<< Updated upstream
         let span = document.createElement("lispan"); 
+=======
+        let span = document.createElement("span"); 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
         span.innerHTML = `Name: ${document.getElementById(nameInput).value} Price: $${document.getElementById(amountInput).value}`;
+=======
+        span.innerHTML = ` ${document.getElementById(nameInput).value} $${document.getElementById(amountInput).value}`;
+>>>>>>> Stashed changes
         div.appendChild(span);
         
        
@@ -72,6 +92,14 @@ function debitFunction(array, nameInput, amountInput, listDiv) {
 
 
 // Entertainment items
+document.getElementById("entAmountInput")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("entPurchaseButton").click();
+    }
+});
+
 document.getElementById("entPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
      debitFunction(entertainments, "entNameInput", "entAmountInput", "entertainmentItems");
@@ -85,6 +113,13 @@ console.log(entertainmentsTotal);
 })
 
 // Food Array
+document.getElementById("foodAmountInput")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("foodPurchaseButton").click();
+    }
+});
 
 document.getElementById("foodPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
@@ -97,6 +132,14 @@ console.log(foods);
 })
 
 // Clothing Array
+document.getElementById("clothingAmountInput")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("clothingPurchaseButton").click();
+    }
+});
+
 document.getElementById("clothingPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
     debitFunction(clothes, "clothingNameInput", "clothingAmountInput", "clothingItems");
@@ -107,7 +150,19 @@ document.getElementById("clothingPurchaseButton").addEventListener("click", (eve
     console.log(clothes);
 })
 
+<<<<<<< Updated upstream
 //Bills Array
+=======
+// Bills Array
+document.getElementById("billsAmountInput")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("billsPurchaseButton").click();
+    }
+});
+
+>>>>>>> Stashed changes
 document.getElementById("billsPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
     debitFunction(bills, "billsNameInput", "billsAmountInput", "billsItems");
