@@ -17,7 +17,15 @@ let clothesTotal = 0;
 let entertainmentsTotal = 0;
 
 let totalSpent = 0;
-function totalSpentCalc(){totalSpent = billsTotal + foodsTotal + clothesTotal + entertainmentsTotal}
+function totalSpentCalc(){
+    totalSpent = billsTotal + foodsTotal + clothesTotal + entertainmentsTotal
+    let footer = document.getElementById("totalSpent");
+    let span = document.createElement("span"); 
+    span.innerHTML = `Total Money: $${totalSpent}`;
+    footer.appendChild(span);
+    document.getElementById("totalSpent").innerHTML = "";
+    document.getElementById("totalSpent").appendChild(span);
+}
 let availableBalance = weeklyBudget - totalSpent;
 function availableBalanceCalc(){
     availableBalance = weeklyBudget - totalSpent
@@ -25,6 +33,8 @@ function availableBalanceCalc(){
     let span = document.createElement("span"); 
     span.innerHTML = `Available Balance: $${availableBalance}`;
     div.appendChild(span);
+    document.getElementById("AvailableBudget").innerHTML = "";
+    document.getElementById("AvailableBudget").appendChild(span);
 } 
 
 function billsCalculator(){
@@ -49,10 +59,6 @@ function entertainmentsCalculator(){
     entertainmentsTotal += entertainments[lastIndex].price;
 }
 
-// below defines the total expenses for the week and how much the user still has available to spend
-
-
-
 if (availableBalance <= 0){
     alert("You have no available funds until the start of next week.")
 }
@@ -62,13 +68,11 @@ function debitFunction(array, nameInput, amountInput, listDiv) {
         alert("Please enter a value for the name and price")
         } else {
 
-        array.push({"name":document.getElementById(nameInput).value, price:parseInt(document.getElementById(amountInput).value)})
+        array.push({"name":document.getElementById(nameInput).value, "price":parseInt(document.getElementById(amountInput).value)})
         let div = document.getElementById(listDiv);
         let span = document.createElement("span"); 
         span.innerHTML = `Name: ${document.getElementById(nameInput).value} Price: $${document.getElementById(amountInput).value}`;
         div.appendChild(span);
-        
-       
 
         document.getElementById(nameInput).value = '';
         document.getElementById(amountInput).value = '';
@@ -81,7 +85,6 @@ function debitFunction(array, nameInput, amountInput, listDiv) {
 document.getElementById("entPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
      debitFunction(entertainments, "entNameInput", "entAmountInput", "entertainmentItems");
-    
      entertainmentsCalculator();
      totalSpentCalc();
      availableBalanceCalc();
@@ -123,17 +126,5 @@ document.getElementById("billsPurchaseButton").addEventListener("click", (event)
     console.log(availableBalance);
     console.log(bills);
 })
-//this will be used for the user to input new purchases
 
-// const itemName = document.getElementById("nameInput").value;
-// const itemPrice = document.getElementById("amountInput").value;
-// const dateBought = document.getElementById("date").value;
-
-// function addItem(array, itemName, itemPrice, dateBought) {
-//     return array.push({Name: itemName, Price: itemPrice, Date: dateBought});
-// }
-
-// addItem(bills, "Gas", 40, "08-02-2022");
-
-//Below allows us to add the total price of each category
 });
