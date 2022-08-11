@@ -31,7 +31,13 @@ let entertainmentsTotal = 0;
 let totalSpent = 0;
 function totalSpentCalc(){totalSpent = billsTotal + foodsTotal + clothesTotal + entertainmentsTotal}
 let availableBalance = weeklyBudget - totalSpent;
-function availableBalanceCalc(){availableBalance = weeklyBudget - totalSpent} 
+function availableBalanceCalc(){
+    availableBalance = weeklyBudget - totalSpent
+    let div = document.getElementById("AvailableBudget");
+    let span = document.createElement("span"); 
+    span.innerHTML = `Available Balance: $${availableBalance}`;
+    div.appendChild(span);
+} 
 
 function billsCalculator(){
     let lastIndex = bills.length-1
@@ -70,16 +76,12 @@ function debitFunction(array, nameInput, amountInput, listDiv) {
 
         array.push({"name":document.getElementById(nameInput).value, price:parseInt(document.getElementById(amountInput).value)})
         let div = document.getElementById(listDiv);
-<<<<<<< Updated upstream
-        let span = document.createElement("lispan"); 
-=======
+
         let span = document.createElement("span"); 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-        span.innerHTML = `Name: ${document.getElementById(nameInput).value} Price: $${document.getElementById(amountInput).value}`;
-=======
+       span.innerHTML = `Name: ${document.getElementById(nameInput).value} Price: $${document.getElementById(amountInput).value}`;
+
         span.innerHTML = ` ${document.getElementById(nameInput).value} $${document.getElementById(amountInput).value}`;
->>>>>>> Stashed changes
+
         div.appendChild(span);
         
        
@@ -150,9 +152,6 @@ document.getElementById("clothingPurchaseButton").addEventListener("click", (eve
     console.log(clothes);
 })
 
-<<<<<<< Updated upstream
-//Bills Array
-=======
 // Bills Array
 document.getElementById("billsAmountInput")
     .addEventListener("keyup", function(event) {
@@ -162,7 +161,6 @@ document.getElementById("billsAmountInput")
     }
 });
 
->>>>>>> Stashed changes
 document.getElementById("billsPurchaseButton").addEventListener("click", (event) =>{
     event.preventDefault();
     debitFunction(bills, "billsNameInput", "billsAmountInput", "billsItems");
