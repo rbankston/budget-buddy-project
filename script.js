@@ -43,7 +43,7 @@ function availableBalanceCalc(){
     availableBalance = weeklyBudget - totalSpent
     let div = document.getElementById("AvailableBudget");
     let span = document.createElement("span"); 
-    span.innerHTML = `Available Balance: $${availableBalance}`;
+    span.innerHTML = `$${availableBalance}`;
     div.appendChild(span);
     document.getElementById("AvailableBudget").innerHTML = "";
     document.getElementById("AvailableBudget").appendChild(span);
