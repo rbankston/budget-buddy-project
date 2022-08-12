@@ -31,10 +31,10 @@ let entertainmentsTotal = 0;
 let totalSpent = 0;
 function totalSpentCalc(){
     totalSpent = billsTotal + foodsTotal + clothesTotal + entertainmentsTotal
-    let footer = document.getElementById("totalSpent");
+    let div = document.getElementById("totalSpent");
     let span = document.createElement("span"); 
-    span.innerHTML = `Total Money: $${totalSpent}`;
-    footer.appendChild(span);
+    span.innerHTML = `$${totalSpent}`;
+    div.appendChild(span);
     document.getElementById("totalSpent").innerHTML = "";
     document.getElementById("totalSpent").appendChild(span);
 }

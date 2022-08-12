@@ -11,7 +11,7 @@ header {
     margin: 10px;
 }
 
-#Budget, #AvailableBudget {
+#Budget, #AvailableBudget, #totalSpent, #entSpent, #foodSpent, #clothingSpent, #billsSpent {
     float: right;
 }
 
@@ -107,7 +107,7 @@ header {
     font-size: 120%;
 }
 
-#totalSpent {
+#footer {
     background-color: #FFB1B0;
     width: auto;
     border-radius: 25px;
@@ -187,8 +187,8 @@ header {
         width: 25%;
     }
 
-    #totalSpent {
-        position: absolute;
+    #footer {
+        position: relative;
         bottom: 0;
         width: 96.5%;
     }
