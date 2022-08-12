@@ -31,10 +31,10 @@ let entertainmentsTotal = 0;
 let totalSpent = 0;
 function totalSpentCalc(){
     totalSpent = billsTotal + foodsTotal + clothesTotal + entertainmentsTotal
-    let div = document.getElementById("totalSpent");
+    let footer = document.getElementById("totalSpent");
     let span = document.createElement("span"); 
-    span.innerHTML = `$${totalSpent}`;
-    div.appendChild(span);
+    span.innerHTML = `Total Money: $${totalSpent}`;
+    footer.appendChild(span);
     document.getElementById("totalSpent").innerHTML = "";
     document.getElementById("totalSpent").appendChild(span);
 }
@@ -52,23 +52,32 @@ function availableBalanceCalc(){
 function billsCalculator(){
     let lastIndex = bills.length-1
     billsTotal += bills[lastIndex].price;
+    let total = document.getElementById("billsSpent");
+    total.innerText = `$${billsTotal}`;
 }
-console.log(availableBalance);
+
 function foodsCalculator(){
     let lastIndex = foods.length-1
     foodsTotal += foods[lastIndex].price;
+    let total = document.getElementById("foodSpent");
+    total.innerText = `$${foodsTotal}`;
 }
 
 
 function clothesCalculator(){
     let lastIndex = clothes.length-1
     clothesTotal += clothes[lastIndex].price;
+    let total = document.getElementById("clothingSpent");
+    total.innerText = `$${clothesTotal}`;
 }
 
 
 function entertainmentsCalculator(){
     let lastIndex = entertainments.length-1
     entertainmentsTotal += entertainments[lastIndex].price;
+    let total = document.getElementById("entSpent");
+    total.innerText = `$${entertainmentsTotal}`;
+
 }
 
 if (availableBalance <= 0){
@@ -112,9 +121,9 @@ document.getElementById("entPurchaseButton").addEventListener("click", (event) =
      entertainmentsCalculator();
      totalSpentCalc();
      availableBalanceCalc();
-     console.log(availableBalance);
-console.log(entertainments);
-console.log(entertainmentsTotal);
+     if (availableBalance <= 0){
+        alert("You have no available funds until the start of next week.")
+    }
 })
 
 // Food Array
@@ -132,6 +141,9 @@ document.getElementById("foodPurchaseButton").addEventListener("click", (event) 
     foodsCalculator();
     totalSpentCalc();
     availableBalanceCalc();
+    if (availableBalance <= 0){
+        alert("You have no available funds until the start of next week.")
+    }
     console.log(availableBalance);
 console.log(foods);
 })
@@ -151,6 +163,9 @@ document.getElementById("clothingPurchaseButton").addEventListener("click", (eve
     clothesCalculator();
     totalSpentCalc();
     availableBalanceCalc();
+    if (availableBalance <= 0){
+        alert("You have no available funds until the start of next week.")
+    }
     console.log(availableBalance);
     console.log(clothes);
 })
@@ -170,6 +185,9 @@ document.getElementById("billsPurchaseButton").addEventListener("click", (event)
     billsCalculator();
     totalSpentCalc();
     availableBalanceCalc();
+    if (availableBalance <= 0){
+        alert("You have no available funds until the start of next week.")
+    }
     console.log(availableBalance);
     console.log(bills);
 })
