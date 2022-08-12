@@ -33,7 +33,7 @@ function totalSpentCalc(){
     totalSpent = billsTotal + foodsTotal + clothesTotal + entertainmentsTotal
     let footer = document.getElementById("totalSpent");
     let span = document.createElement("span"); 
-    span.innerHTML = `Total Money: $${totalSpent}`;
+    span.innerHTML = `$${totalSpent}`;
     footer.appendChild(span);
     document.getElementById("totalSpent").innerHTML = "";
     document.getElementById("totalSpent").appendChild(span);
